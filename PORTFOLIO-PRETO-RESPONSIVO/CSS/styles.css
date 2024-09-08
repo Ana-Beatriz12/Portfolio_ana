@@ -56,7 +56,7 @@ header ul li a{
 
 
 .banner-2{
-    height: 100vh;
+    height: 150vh;
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,39 +73,180 @@ header ul li a{
     color: white;
     
  }
- /*ana beatriz*/
-.banner-2 #titulo-2 h1{
-   font-size: 3.6em;
-   margin-left: 40px;
-   padding-top: 56px;
-   margin-bottom: 0px;
-   color: white;
-   align-items: column;
-   display: flexbox;
-   
+
+ /*Nomes ana beatrz bento broetto*/
+
+ .nomes {
+    display: flex;
+    /* justify-content: center; Alinha horizontalmente no centro */
+    flex-wrap: wrap; /* Mantém a responsividade */
 }
 
- /*bento broetto*/
- .banner-2 #titulo-3 h1{
+
+
+/*deixa o ana beatriz 'branco'
+e bento broetto 'rosa'
+
+PARA DUPLICAR UMA LINHA APERTE
+SHIFT+ALT+ SETA PARA BAIXO OU PARA CIMA HEHE*/
+
+.nome-branco{
+color:white
+}
+.nome-rosa{
+color:rgb(216, 128, 199);
+}
+
+.nomes  h1 {
+    margin: 0 -10px; /* Espaçamento entre os nomes */
+    padding-top: 35px;
+    margin-left: 60px;
+    padding: -20px;
     font-size: 3.6em;
-    margin-left: 400px;
-    padding-top:  -266px!important;
-    margin-bottom: 0px;
-    color: rgb(216, 128, 199);
-    align-items: column;
-    display: flexbox;
+
+}
+
+/*RESPONSIVIDADE PARA MOBILE*/
+@media (max-width: 768px) {
+    .nomes {
+        flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    .nomes h1 {
+        margin: 5px 0; /* Ajusta o espaçamento para telas pequenas */
+    }
+}
+
+
+
+
+
+
+ /*TITULOS FRONT E WEB-DESIGN*/
+ 
+ .dev {
+    display: flex;
+    /* justify-content: center; Alinha horizontalmente no centro */
+    flex-wrap: wrap; /* Mantém a responsividade */
  }
 
-/*esse é dos botoes*/
-/* .banner-2 #titulo h2{
-    color: rgb(255, 255, 255);
-    text-align: justify;
+ .dev h2 {
+    margin: 0 -23px; /* Espaçamento entre os nomes */
+    margin-left: 48px;
+    padding: -20px;
     font-size: 2em;
-    text-align:start;
-    margin-left: 34px;
-    margin-right: 34px;
-   
-} */
+    padding-top: 55px;
+    margin-bottom: 6px;
+
+}
+
+
+
+/*deixa o front 'branco'
+e web-design 'rosa'
+
+PARA DUPLICAR UMA LINHA APERTE
+SHIFT+ALT+ SETA PARA BAIXO OU PARA CIMA HEHE*/
+
+.dev-branco{
+color:white
+}
+.dev-rosa{
+color:rgb(216, 128, 199);
+}
+
+
+/*RESPONSIVIDADE PARA MOBILE*/
+@media (max-width: 768px) {
+   .dev {
+       flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+       align-items: center; /* Centraliza verticalmente */
+   }
+
+   .dev h2 {
+       margin: 5px 0; /* Ajusta o espaçamento para telas pequenas */
+       flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+       align-items: center; /* Centraliza verticalmente */
+   }
+}
+
+/*FIM DOS TITULOS FRONT E WEB-DESIGN*/
+
+
+
+/*IMAGEM MENINA HOME*/
+
+/* Estilização do container da imagem */
+.img-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Alinha no canto direito */
+    margin-right: 20px; /* Espaçamento da margem direita */
+}
+
+/* O quadrado por trás da imagem */
+.quadrado {
+    width: 350px; /* Tamanho do quadrado */
+    height: 370px;/*aumenta para baixo*/
+    border: 6px solid  rgb(253, 253, 253);
+    position: absolute;
+    top: -159px; /* Desloca o quadrado um pouco para baixo */
+    right: 20px; /* Desloca o quadrado um pouco para a esquerda */
+    z-index: 1; /* Coloca o quadrado atrás da imagem */
+}
+
+/* Estilo da imagem */
+.img img {
+    position: relative;
+    z-index: 2; /* Coloca a imagem na frente do quadrado */
+    width: 440px; /* Tamanho da imagem */
+    height: 389px;
+    margin-right: 0; /* Remove margens adicionais à direita */
+    margin-top: -180px; /* Ajuste a sobreposição */
+    left: 100px;
+
+}
+
+/*MEDIA HOME IMAGE*/
+@media (max-width: 1217px) {
+    .img img{
+        visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+        flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+        align-items: center; /* Centraliza verticalmente */
+    }
+    .quadrado{
+        visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+        flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+        align-items: center; /* Centraliza verticalmente */
+    }
+    
+
+} 
+
+
+@media (max-width:375px) {
+    .img img{
+        visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+        flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+        align-items: center; /* Centraliza verticalmente */
+    }
+    .quadrado{
+        visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+        flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+        align-items: center; /* Centraliza verticalmente */
+    }
+    
+
+} 
+
+/*FIM DA IMAGEM MENINA HOME*/
+
+
+
+/*BOTOES LINKEDIN E GIIT GUB HOME*/
+
+
 
 
 
@@ -113,22 +254,28 @@ header ul li a{
 /*MUDANÇA DE COR DOS MENUS DO HOUVER*/
 /* github e linkedin */
 .social-media {
-    margin-top: 1rem;
+
     display: flex;
+    margin-top: -65px;
+    margin-left: -655px;
+    height: 90px;
+    width: 900px;
+ 
 }
 
 .social-media a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 1rem 4rem;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 252, 252);
     min-width: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: .5s ease-in-out;
     border-radius: 4px;
-    margin-left: 9px;
+    margin-left: 20px;
+ 
 }
 
 /* deixa os botoes do git e linkedin com animacao de mudar de cor quando passa o mouse em cima */
