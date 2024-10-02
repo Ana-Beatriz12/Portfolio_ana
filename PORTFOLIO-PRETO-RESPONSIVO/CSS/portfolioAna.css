@@ -1,121 +1,78 @@
-.banner-2{
-    height: 150vh;
-    background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;/*aqui ele cobre todo o espaço do baineer*/
-}
 
 
 /*ola, meu nome é*/
-.banner-2 #titulo-1 h2{
+.container #paragrafo-ola h2{
     font-size: 2em;
     margin-left: 45px;
-    padding-top: 355px;
+    padding-top: 123px;
     margin-bottom: 6px;
     color: white;
-    
+
  }
 
- /*Nomes ana beatrz bento broetto*/
+ /*AQUI AJUSTA A ALTURA DE ESPAÇAMENTO DO PARAGRAFO OLA  EM MOBILE*/
 
+ @media (max-width: 1217px) {
+    .container #paragrafo-ola h2{
+       padding: -45px;
+       margin-bottom: -5px;
+    }}
+
+
+@media (max-width:375px) {
+    .container #paragrafo-ola h2{
+        padding: -45px;
+        margin-bottom: -5px;
+    }}
+   
+
+
+ /*TITULOS ANA E  DEV FRONT E WEB DESIGN(ROSA E BRANCO)*/
  .nomes {
     display: flex;
     /* justify-content: center; Alinha horizontalmente no centro */
     flex-wrap: wrap; /* Mantém a responsividade */
 }
+ 
+.nomes  h1 {
+    margin: 0 -7px; /* Espaçamento entre os nomes */
+    padding-top: 35px;
+    margin-left: 20px;
+    padding: -20px;
+    font-size: 3.6em;
+}
 
-
-
-/*deixa o ana beatriz 'branco'
-e bento broetto 'rosa'
-
-PARA DUPLICAR UMA LINHA APERTE
-SHIFT+ALT+ SETA PARA BAIXO OU PARA CIMA HEHE*/
-
+/*ANA BEATRIZ*/
 .nome-branco{
 color:white
 }
+/*BENTO BROETTO*/
 .nome-rosa{
 color:rgb(216, 128, 199);
 }
 
-.nomes  h1 {
-    margin: 0 -10px; /* Espaçamento entre os nomes */
-    padding-top: 35px;
-    margin-left: 60px;
-    padding: -20px;
-    font-size: 3.6em;
-
-}
-
-/*RESPONSIVIDADE PARA MOBILE*/
-@media (max-width: 768px) {
-    .nomes {
-        flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
-        align-items: center; /* Centraliza verticalmente */
-    }
-
-    .nomes h1 {
-        margin: 5px 0; /* Ajusta o espaçamento para telas pequenas */
-    }
-}
-
-
-
-
-
-
- /*TITULOS FRONT E WEB-DESIGN*/
- 
- .dev {
+/*EU SOU DESENVOLVEDORA FRONT E WEB DESIGN*/
+.dev {
     display: flex;
     /* justify-content: center; Alinha horizontalmente no centro */
     flex-wrap: wrap; /* Mantém a responsividade */
- }
+}
 
- .dev h2 {
-    margin: 0 -23px; /* Espaçamento entre os nomes */
-    margin-left: 48px;
+.dev h2 {
+    margin: 0 0px; /* Espaçamento entre os nomes */
+    margin-left: 7px;
     padding: -20px;
     font-size: 2em;
     padding-top: 55px;
     margin-bottom: 6px;
 
 }
-
-
-
-/*deixa o front 'branco'
-e web-design 'rosa'
-
-PARA DUPLICAR UMA LINHA APERTE
-SHIFT+ALT+ SETA PARA BAIXO OU PARA CIMA HEHE*/
-
 .dev-branco{
 color:white
 }
 .dev-rosa{
 color:rgb(216, 128, 199);
 }
-
-
-/*RESPONSIVIDADE PARA MOBILE*/
-@media (max-width: 768px) {
-   .dev {
-       flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
-       align-items: center; /* Centraliza verticalmente */
-   }
-
-   .dev h2 {
-       margin: 5px 0; /* Ajusta o espaçamento para telas pequenas */
-       flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
-       align-items: center; /* Centraliza verticalmente */
-   }
-}
-
-/*FIM DOS TITULOS FRONT E WEB-DESIGN*/
-
 
 
 /*IMAGEM MENINA HOME*/
@@ -135,8 +92,9 @@ color:rgb(216, 128, 199);
     border: 6px solid  rgb(253, 253, 253);
     position: absolute;
     top: -159px; /* Desloca o quadrado um pouco para baixo */
-    right: 20px; /* Desloca o quadrado um pouco para a esquerda */
+    right: -10px; /* Desloca o quadrado um pouco para a esquerda */
     z-index: 1; /* Coloca o quadrado atrás da imagem */
+    top: -254px;
 }
 
 /* Estilo da imagem */
@@ -144,10 +102,11 @@ color:rgb(216, 128, 199);
     position: relative;
     z-index: 2; /* Coloca a imagem na frente do quadrado */
     width: 440px; /* Tamanho da imagem */
-    height: 389px;
+    height: 399px;
     margin-right: 0; /* Remove margens adicionais à direita */
-    margin-top: -180px; /* Ajuste a sobreposição */
+    margin-top: -280px; /* Ajuste a sobreposição */
     left: 100px;
+  
 
 }
 
@@ -186,21 +145,42 @@ color:rgb(216, 128, 199);
 /*FIM DA IMAGEM MENINA HOME*/
 
 
+/*TIRANDO A MARGIN MOBILE*/
+/* Para telas maiores, como desktops */
+.img-container {
+    margin: 20px;
+}
 
-/*BOTOES LINKEDIN E GIIT GUB HOME*/
+/* Para telas menores, como tablets */
+@media (max-width: 768px) {
+    .img-container {
+        margin: 10px;
+    }
+}
+
+/* Para telas de celulares */
+@media (max-width: 480px) {
+    .img-container {
+        margin: 5px;
+    }
+}
 
 
 
 
+/*BOTOES LINKEDIN E GIT HUB HOME*/
 
 /* github e linkedin */
 .social-media {
-    
-    display: flex;
-    height: 90px;/*90px*/
-    width: 900px;/*900px*/
-    flex-wrap: column wrap; /*faz com que os elementos quebrem a linha quando diminuir a tela.*/
-    justify-content: center;/*flex-end*/
+    font-size: 18px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 12px 24px;
+    display: flex; /* Garante que o botão seja exibido corretamente */
+    width: auto; /* Define a largura automática para ajustar ao conteúdo */
+    max-width: 80%;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-media a {
@@ -216,8 +196,6 @@ color:rgb(216, 128, 199);
     border-radius: 4px;
     margin-left: 20px;/*da distancia um do outro entre os botoes*/
     z-index: 1;
-
-    
 }
 
 
@@ -226,4 +204,161 @@ color:rgb(216, 128, 199);
 a:hover {
     background-color: rgb(216, 128, 199);
      border-radius: 9px;
+}
+
+
+
+ 
+
+
+@media only screen and (max-width: 768px) {
+     .social-media {
+        font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+        padding: 10px 20px; /* Ajusta o padding para telas menores */
+     
+        
+        
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .social-media {
+        font-size: 14px; /* Reduz ainda mais o tamanho da fonte para dispositivos com largura de 375px */
+        padding: 8px 16px; /* Ajusta o padding para dispositivos com largura de 375px */
+        margin-bottom: 10px; 
+    }
+}
+
+
+
+/*ONDA-ROSA*/
+.copo{
+    width: 1346px; /* Tamanho do quadrado */
+    height: 40px;/*aumenta para baixo*/
+    border: 6px solid  rgb(253, 253, 253);
+    position: absolute;
+    z-index: 1;
+
+}
+#onda-rosa{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(216, 128, 199);
+    position: absolute;
+    bottom: 0;
+    animation: animaOnda 5s linear infinite;
+    clip-path: polygon(1% 43%, 19% 56%, 43% 53%, 56% 46%, 67% 43%, 80% 41%, 99% 41%, 99% 98%, 1% 99%, 100% 43%, 100% 99%, 1% 100%);
+  
+}
+
+@keyframes animaOnda{
+    50%{
+        clip-path: polygon(1% 36%, 22% 34%, 43% 42%, 55% 50%, 69% 53%, 81% 53%, 99% 51%, 99% 98%, 1% 99%, 100% 52%, 100% 99%, 1% 100%);
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .content-top, .content-bottom {
+    height: 100vh;
+    display: flex;
+    
+  }
+  
+  .content-top {
+    background-color: #6C63FF;
+    color: white;
+  }
+  
+  .content-bottom {
+    background-color: #FF6F91;
+    color: white;
+    
+  }
+
+  
+  
+.wave-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura da seção de ondas */
+    overflow: hidden;
+    background-color: #000000;
+    z-index: -1;
+  }
+
+  
+  
+  /* Estilos base para as ondas */
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;/*faz com que as ondas ocupem a horizontal inteira da tela*/
+    z-index: -1;
+  }
+  
+  /* Primeira onda */
+  .wave1 {
+    animation: wave1-animation 5s infinite ease-in-out;
+  }
+  
+  /* Segunda onda */
+  .wave2 {
+    animation: wave2-animation 7s infinite ease-in-out;
+    opacity: 0.7; /* Ajuste de opacidade para a segunda onda */
+  }
+  
+  /* Animação da primeira onda - movimento de subida e descida */
+  @keyframes wave1-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(15px); /* Aumenta ou diminui para ajustar a intensidade */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animação da segunda onda - movimento de subida e descida */
+  @keyframes wave2-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px); /* Aumenta ou diminui para ajustar a intensidade */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+#sobre-mim{
+    z-index: 1;
 }
