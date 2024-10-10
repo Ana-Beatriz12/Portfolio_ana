@@ -7,6 +7,22 @@ html, body {
   box-sizing: border-box;
 }
 
+/*TIRANDO A MARGIN DO PARAGRAFO OLÁ MEU NOME É*/
+/*AQUI AJUSTA A ALTURA DE ESPAÇAMENTO DO PARAGRAFO OLA  EM MOBILE*/
+
+@media (max-width: 1217px) {
+  .container #paragrafo-ola h2{
+     margin-bottom: -5px;
+     margin-top: 3px;/*altura entre o cabeçalho eo titulo ola.*/
+  }}
+@media only screen and (max-width: 375px) {
+  /*NOME BENTO BROETTO MOBILE*/
+  .container #paragrafo-ola h2{
+     /* padding: 23px; */
+     margin-top: -23px;
+     margin-bottom: -62px;
+     margin-block: -334px;
+  }}
 
 /*ola, meu nome é*/
 .container #paragrafo-ola h2{
@@ -131,7 +147,8 @@ color:rgb(216, 128, 199);
     top: -159px; /* Desloca o quadrado um pouco para baixo */
     right: -10px; /* Desloca o quadrado um pouco para a esquerda */
     z-index: 1; /* Coloca o quadrado atrás da imagem */
-    top: -254px;
+    /* top: -254px; */
+    margin-top: -234px;
 }
 
 /* Estilo da imagem */
@@ -141,7 +158,7 @@ color:rgb(216, 128, 199);
     width: 440px; /* Tamanho da imagem */
     height: 399px;
     margin-right: 0; /* Remove margens adicionais à direita */
-    margin-top: -280px; /* Ajuste a sobreposição */
+    margin-top: -490px; /* Ajuste a sobreposição */
     left: 100px;
   
 
@@ -220,6 +237,7 @@ color:rgb(216, 128, 199);
     justify-content: center;
     margin-top: 45px;
     z-index: 1px;
+    
 }
 
 .social-media a {
@@ -268,6 +286,159 @@ a:hover {
         margin-bottom: 10px; 
     }
 }
+
+
+
+/*PAG SOBRE MIM*/
+
+/* Container da imagem onda divisão das paginas*/
+/* Remove margens e paddings para evitar comportamentos indesejados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container da imagem */
+.onda-divisao-pages {
+  position: relative; /* O container mantém o contexto de posicionamento */
+  width: 100%; /* Ocupa toda a largura da tela */
+  overflow: hidden; /* Evita qualquer conteúdo extra criar scroll */
+}
+
+/*Medias para arrumar a responsividade da onda no mobile*/
+@media only screen and (max-width: 375px) {
+  /*onda-divisao-pages MOBILE*/
+  
+  .onda-divisao-pages{
+     padding-top: 423px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  /*onda-divisao-pages MOBILE*/
+  .onda-divisao-pages{
+    padding-top: 123px;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  /*onda-divisao-pages MOBILE*/
+  .onda-divisao-pages{
+     padding-top: 123px;
+  }
+}
+
+
+/* Imagem de onda */
+.onda-divisao img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Ajusta a posição vertical da imagem */
+  width: 100%; /* Ocupa toda a largura da página */
+  height: auto; /* Mantém a proporção */
+}
+
+/* Opcional: se a imagem for muito alta e o layout for afetado */
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Evita qualquer scroll horizontal */
+}
+
+/*TITULO*/
+.sobre-mim h1{
+  font-size: 50px;
+  color: white;
+
+}
+
+/*DESCRIÇÃO SOBRE MIM*/
+.container #paragrafo-sobreMim h3{
+  color: white;
+  font-size: 20px;
+  margin-block: 34px;
+  text-transform: uppercase;
+  text-align: unset;
+}
+
+
+
+
+
+
+/*IMAGEM EU SOBRE-MIM PAGE*/
+
+/* Estilização do container da imagem */
+.container .img-container-sobre {
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* Alinha no canto direito */
+  margin-right: 20px; /* Espaçamento da margem direita */
+}
+
+/* O quadrado por trás da imagem */
+.quadrado-sobre {
+  width: 350px; /* Tamanho do quadrado */
+  height: 370px;/*aumenta para baixo*/
+  border: 6px solid  rgb(253, 253, 253);
+  position: absolute;
+  top: -172px; 
+  right: -10px; /* Desloca o quadrado um pouco para a esquerda */
+  z-index: 1; /* Coloca o quadrado atrás da imagem */
+}
+
+/* Estilo da imagem */
+.img-sobre img {
+  position: relative;
+  z-index: 2; /* Coloca a imagem na frente do quadrado */
+  width: 440px; /* Tamanho da imagem */
+  height: 399px;
+  margin-right: 0; /* Remove margens adicionais à direita */
+  margin-top: -190px; /* Ajuste a sobreposição */
+  left: 100px;
+
+
+}
+
+/*MEDIA HOME IMAGE*/
+@media (max-width: 1217px) {
+  .img-sobre img{
+      visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+      flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+      align-items: center; /* Centraliza verticalmente */
+  }
+  .quadrado-sobre{
+      visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+      flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+      align-items: center; /* Centraliza verticalmente */
+  }
+  
+
+} 
+
+
+@media (max-width:375px) {
+  .img-sobre img{
+      visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+      flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+      align-items: center; /* Centraliza verticalmente */
+  }
+  .quadrado-sobre{
+      visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
+      flex-direction: column; /* Quando a tela for pequena, coloca um nome embaixo do outro */
+      align-items: center; /* Centraliza verticalmente */
+  }
+  
+
+} 
+
+/*FIM DA IMAGEM MINHA SOBRE PAG*/
+
+
+
+
+
 
 
 
@@ -361,12 +532,3 @@ a:hover {
     }
   }
   
-
-/*PAG SOBRE MIM*/
-.sobre-mim h1{
-  font-size: 50px;
-  color: white;
-
-  padding-top: 330px;
-  margin-bottom: 6px;
-}
