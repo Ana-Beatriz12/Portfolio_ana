@@ -356,15 +356,27 @@ html, body {
 /*DESCRIÇÃO SOBRE MIM*/
 .container #paragrafo-sobreMim h3{
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   margin-block: 34px;
-  text-transform: uppercase;
-  text-align: unset;
+  /* text-transform: inherit; */
+  /* text-align: left; */
+  width: 523px;
+}
+@media only screen and (max-width:500px ) and (min-width: 375px) {
+  .container #paragrafo-sobreMim h3{
+    width: 100px;
+  }
+  .container #paragrafo-sobreMim h3{
+    width: 300px;
+  }
 }
 
-
-
-
+@media(max-width: 360px){
+  .container #paragrafo-sobreMim h3{
+    width: 325px;
+  }
+  
+}
 
 
 /*IMAGEM EU SOBRE-MIM PAGE*/
@@ -375,6 +387,7 @@ html, body {
   display: flex;
   justify-content: flex-end; /* Alinha no canto direito */
   margin-right: 20px; /* Espaçamento da margem direita */
+  margin-top: -220px;
 }
 
 /* O quadrado por trás da imagem */
@@ -401,7 +414,7 @@ html, body {
 
 }
 
-/*MEDIA HOME IMAGE*/
+/*MEDIA SOBRE IMAGE*/
 @media (max-width: 1217px) {
   .img-sobre img{
       visibility: hidden;/*faz com que a imagem suma quando vai para mobile.*/
@@ -436,8 +449,10 @@ html, body {
 /*FIM DA IMAGEM MINHA SOBRE PAG*/
 
 
-
-
+/*MY SKILLS PRINCIPAIS LINGUAGENS UTILIZADAS.*/
+#container-mySkills  #principais-linguagens{
+  margin: 52px;
+}
 
 
 
