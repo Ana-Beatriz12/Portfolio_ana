@@ -449,13 +449,39 @@ html, body {
 /*FIM DA IMAGEM MINHA SOBRE PAG*/
 
 
-/*MY SKILLS PRINCIPAIS LINGUAGENS UTILIZADAS.*/
-#container-mySkills  #principais-linguagens{
-  margin: 52px;
+/*MY SKILLS PRINCIPAIS LINGUAGENS UTILIZADAS.
+TÍTULO*/
+#container-mySkills  #principais-linguagens h1{
+  margin-block: 134px;/*dá um espaçamento entre o texto sobre e o titulo.*/
 }
 
 
+/*ANIMAÇÃO CARROSSEL SKILLS PAG SOBRE*/
+.container-slide{
+  width: 75vh;
+  white-space: nowrap;/*faz com que todas as imagens fiquem na mesma linha*/
+  overflow: hidden;/*tudo o que estiver fora do container-slide, nao vai aparecer.*/
+}
 
+.paginas-slide img{
+  width: 200px;/*deixa as imagens menor.*/
+}
+
+.paginas-slide{
+  display: inline-block;/*faz com que todos fiquem na mesma linha*/
+  animation: anima 5s linear infinite;
+}
+
+/*ANIMAÇÃO CARROSSEL SKILLS*/
+
+@keyframes anima {
+  0%{
+    transform: translatex(0);
+  }
+  100%{
+    transform: translateY(-50%);/*o -50% é para fazer com que ele(paginas-slide) se locomova até metade do tamanho que ele tem.*/
+  }
+}
 
 /*ANIMAÇÃO ONDAS ;*/
 
