@@ -346,7 +346,9 @@ html, body {
   overflow-x: hidden; /* Evita qualquer scroll horizontal */
 }
 
-/*TITULO*/
+
+/*PAG SOBRE MIM*/
+/*TITULO SOBRE MIM*/
 .sobre-mim h1{
   font-size: 50px;
   color: white;
@@ -458,7 +460,7 @@ TÍTULO*/
 
 /*ANIMAÇÃO CARROSSEL SKILLS PAG SOBRE*/
 .container-slide{
-  width: 75vh;
+  width: 99vw;
   white-space: nowrap;/*faz com que todas as imagens fiquem na mesma linha*/
   overflow: hidden;/*tudo o que estiver fora do container-slide, nao vai aparecer.*/
 }
@@ -470,18 +472,195 @@ TÍTULO*/
 .paginas-slide{
   display: inline-block;/*faz com que todos fiquem na mesma linha*/
   animation: anima 5s linear infinite;
+ 
 }
 
 /*ANIMAÇÃO CARROSSEL SKILLS*/
 
 @keyframes anima {
-  0%{
-    transform: translatex(0);
+  0% {
+    transform: translateX(0);
   }
-  100%{
-    transform: translateY(-50%);/*o -50% é para fazer com que ele(paginas-slide) se locomova até metade do tamanho que ele tem.*/
+  100% {
+    transform: translateX(-50%);/*o -50% é para fazer com que ele(paginas-slide) se locomova até metade do tamanho que ele tem.*/
   }
 }
+
+/*MEDIA QUERYS PARA O CARROSSEL DE MINHAS LINGUAGENS*/
+
+@media only screen and (max-width: 375px) {
+  /*MY SKILLS PRINCIPAIS LINGUAGENS UTILIZADAS.
+TÍTULO*/
+  #container-mySkills  #principais-linguagens h1{
+    margin-block: 49px;/*dá um espaçamento entre o texto sobre e o titulo.*/
+  }
+  .container-slide{
+    margin-block: -20px;/*altura do carrossel*/
+    max-width: -526px;
+  }
+}
+
+
+/*PAG PROJETOS*/
+/*TITULO PROJETOS H1*/
+
+/*TITULO*/
+.titulo-projetos h1{
+  font-size: 50px;
+  color: white;
+
+}
+
+/*PROJETOS CARDS*/
+.img-wrapper{
+  display: flex;
+  gap: 0.2rem;
+  & > div{
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 34px;
+    transition: width 0.5s ease-out;
+    border-radius: 0.5rem;
+    &:hover{
+      cursor: pointer;
+      & > img{
+        filter: brightness(0.7);
+        transform: scale(1.2);
+        transition: transform 0.5 ease-in-out;
+        filter: 0.5s ease-in;
+      }
+      & > h2, & > p{
+        color: rgb(15, 14, 14);
+        padding: 1rem;
+        transition: transform .5s ease-in;
+        text-transform: uppercase;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+      }
+      & > h2{
+        font-size: 2rem;
+        transform:translateY(-140px);
+        margin-top: -30px;
+      }
+      & > p{
+        font-size: 1rem;
+        transform: translateY(-180px);
+      }
+    }
+  }
+  &:hover > div:not(:hover)>img{
+    filter: blur(2px);
+    transition: filter 0.5s ease-out;
+  }
+  img{
+    transition: 0.5s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+/*RODAPÉ FOOTER*/
+
+/*Rodapé (Footer)*/
+
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color: #bf5a72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(239, 235, 235);
+  
+}
+
+.footer img{
+  width: 60px;
+  height: 60px;
+  align-items: start;
+  justify-content: start;
+  color: black;
+  margin-left: 34px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/*MEDIA QUERYS FOOTER RODAPÉ */
+@media only screen and (max-width: 375px) {
+
+  .footer {
+    height: 99px;
+    /*width: 3px;/*largura do rodapé */
+    display: inline-block;/*faz com que todos fiquem na mesma linha*/
+    
+  }
+  .footer p{
+    text-align: center;
+    text-transform: capitalize;/*capitalize*/
+    font-size: 20px;
+  }
+
+  .footer img{
+    height: 39px;
+    /* width: 33px; */
+    display: inline-block;/*faz com que todos fiquem na mesma linha*/
+}}
+
+
+@media only screen and (max-width: 414px) {
+
+  .footer {
+    height: 140px;
+    /*width: 3px;/*largura do rodapé */
+    display: inline-block;/*faz com que todos fiquem na mesma linha*/
+    
+  }
+  .footer p{
+    text-align: center;
+    text-transform: capitalize;/*capitalize*/
+    font-size: 25px;
+  }
+
+  .footer img{
+    height: 49px;
+    /* width: 33px; */
+    display: inline-block;/*faz com que todos fiquem na mesma linha*/
+}}
+
+
+
+
+@media only screen and (max-width: 430px) {
+
+  .footer {
+    height: 140px;
+    /*width: 3px;/*largura do rodapé */
+    display: inline-block;/*faz com que todos fiquem na mesma linha*/
+    
+  }
+  .footer p{
+    text-align: center;
+    text-transform: capitalize;/*capitalize*/
+    font-size: 25px;
+  }
+
+  .footer img{
+    height: 49px;
+    /* width: 33px; */
+    display: inline-block;/*faz com que todos fiquem na mesma linha*/
+}}
+
+
+
+
+
+
+
 
 /*ANIMAÇÃO ONDAS ;*/
 
