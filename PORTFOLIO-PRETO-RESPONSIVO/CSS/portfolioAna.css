@@ -5,7 +5,104 @@ html, body {
 
 * {
   box-sizing: border-box;
+  font-family: 'inter', sans-serif
 }
+
+
+/*HEADER CABEÇALHO*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+
+header{
+  background-color:  #f5dddd;
+  box-shadow: 0px 3px 10px white;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem  6rem;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo h1{
+  color: white;
+  cursor: pointer;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+}
+
+.nav-list ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;/*TIRA A BOLINHA DOS MENUS DO CABEÇALHO*/
+  cursor: pointer;
+}
+
+.nav-item{
+  margin: 0 15px;
+
+}
+
+.nav-link{
+  text-decoration: none;
+  font-size:1.15rem ;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.login-button button{
+  border:none;
+  background-color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.login-button button a {
+  text-decoration: none;
+  color: #6C63FF;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.mobile-menu-icon{
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+@media screen and (max-widht:730px) {
+  .nav-bar{
+    padding: 1.5rem 4rem;
+  }
+  .nav-item{
+    display: none;/*faz com que os links não aparecem na tela grande, só depois embaixo, quando clicado o menu sanduiche*/
+  }
+  .login-button{
+    display: none;
+  }
+  .mobile-menu-icon{
+    display: block;
+  }
+  .mobile-menu-icon button{
+    background-color: transparent;/*tira a cor do botão*/
+    border-radius: none;
+  }
+}
+/*TERMNAR DE ASSISTR O VIDEO 13:20 
+https://youtu.be/P9cSVCGj0I0?si=KQfIjfl7VT4SEOjm
+
+*/
 
 /*TIRANDO A MARGIN DO PARAGRAFO OLÁ MEU NOME É*/
 /*AQUI AJUSTA A ALTURA DE ESPAÇAMENTO DO PARAGRAFO OLA  EM MOBILE*/
@@ -654,8 +751,6 @@ TÍTULO*/
     /* width: 33px; */
     display: inline-block;/*faz com que todos fiquem na mesma linha*/
 }}
-
-
 
 
 
