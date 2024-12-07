@@ -11,94 +11,158 @@ html, body {
 
 /*HEADER CABEÇALHO*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
-
-header{
-  background-color:  #f5dddd;
-  box-shadow: 0px 3px 10px white;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
-.nav-bar{
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem  6rem;
+/* Ajuste no cabeçalho */
+header {
+  background-color: #24252a;
+  box-shadow: 0px 3px 10px #464646;
+  position: relative; /* Adicione esta linha */
+  z-index: 10; /* Adicione esta linha */
 }
 
-.logo{
-  display: flex;
-  align-items: center;
+/* Ajuste no menu mobile */
+.mobile-menu {
+  display: none;
+  position: absolute; /* Mude para absolute */
+  top: 60px; /* Ajuste conforme necessário */
+  left: 0;
+  width: 100%;
+  background-color: #24252a;
+  z-index: 9; /* Adicione esta linha */
 }
 
-.logo h1{
-  color: white;
-  cursor: pointer;
+/* Ajuste no botão do menu */
+.mobile-menu-icon {
+  display: none;
+  z-index: 11; /* Adicione esta linha */
 }
 
-.nav-list{
-  display: flex;
-  align-items: center;
+/* Media query para mobile */
+@media screen and (max-width: 730px) {
+  .nav-item {
+      display: none;
+  }
+  .login-button {
+      display: none;
+  }
+  .mobile-menu-icon {
+      display: block;
+  }
+  .mobile-menu.open {
+      display: flex; /* Exibe o menu quando aberto */
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 1rem;
+  }
 }
 
-.nav-list ul{
-  display: flex;
-  justify-content: center;
-  list-style: none;/*TIRA A BOLINHA DOS MENUS DO CABEÇALHO*/
-  cursor: pointer;
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
 }
 
-.nav-item{
-  margin: 0 15px;
-
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.nav-link{
-  text-decoration: none;
-  font-size:1.15rem ;
-  color: white;
-  font-weight: 400;
-  cursor: pointer;
+.logo h1 {
+    color: #fff;
 }
 
-.login-button button{
-  border:none;
-  background-color: black;
-  padding: 10px 15px;
-  border-radius: 5px;
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0187a7;
 }
 
 .login-button button a {
-  text-decoration: none;
-  color: #6C63FF;
-  font-weight: 500;
-  font-size: 1.1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
-.mobile-menu-icon{
-  display: none;
-}
-
-.mobile-menu{
-  display: none;
-}
-
-@media screen and (max-widht:730px) {
-  .nav-bar{
-    padding: 1.5rem 4rem;
-  }
-  .nav-item{
-    display: none;/*faz com que os links não aparecem na tela grande, só depois embaixo, quando clicado o menu sanduiche*/
-  }
-  .login-button{
+.mobile-menu-icon {
     display: none;
-  }
-  .mobile-menu-icon{
-    display: block;
-  }
-  .mobile-menu-icon button{
-    background-color: transparent;/*tira a cor do botão*/
-    border-radius: none;
-  }
 }
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
+
+
 /*TERMNAR DE ASSISTR O VIDEO 13:20 
 https://youtu.be/P9cSVCGj0I0?si=KQfIjfl7VT4SEOjm
 
@@ -106,7 +170,6 @@ https://youtu.be/P9cSVCGj0I0?si=KQfIjfl7VT4SEOjm
 
 /*TIRANDO A MARGIN DO PARAGRAFO OLÁ MEU NOME É*/
 /*AQUI AJUSTA A ALTURA DE ESPAÇAMENTO DO PARAGRAFO OLA  EM MOBILE*/
-
 @media (max-width: 1217px) {
   .container #paragrafo-ola h2{
      margin-bottom: -5px;
@@ -120,6 +183,7 @@ https://youtu.be/P9cSVCGj0I0?si=KQfIjfl7VT4SEOjm
      margin-bottom: -62px;
      margin-block: -334px;
   }}
+
 
 /*ola, meu nome é*/
 .container #paragrafo-ola h2{
@@ -145,6 +209,7 @@ https://youtu.be/P9cSVCGj0I0?si=KQfIjfl7VT4SEOjm
       margin-bottom: -5px;
       margin-top: 243px;
     }}
+
    
 
 
