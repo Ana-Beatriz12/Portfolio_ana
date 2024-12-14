@@ -665,72 +665,190 @@ TÍTULO*/
 }
 
 
-/*PAG PROJETOS*/
-/*TITULO PROJETOS H1*/
-
-/*TITULO*/
-.titulo-projetos h1{
-  font-size: 50px;
-  color: white;
-
+/*PAG PROJETOS CARDS*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
 }
 
-/*PROJETOS CARDS*/
-.img-wrapper{
+.cards .card{
+  height: 100vh;
+  width: 100%;
   display: flex;
-  gap: 0.2rem;
-  & > div{
-    width: 400px;
-    height: 200px;
-    overflow: hidden;
-    margin-left: 34px;
-    transition: width 0.5s ease-out;
-    border-radius: 0.5rem;
-    &:hover{
-      cursor: pointer;
-      & > img{
-        filter: brightness(0.7);
-        transform: scale(1.2);
-        transition: transform 0.5 ease-in-out;
-        filter: 0.5s ease-in;
-      }
-      & > h2, & > p{
-        color: rgb(15, 14, 14);
-        padding: 1rem;
-        transition: transform .5s ease-in;
-        text-transform: uppercase;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
-      }
-      & > h2{
-        font-size: 2rem;
-        transform:translateY(-140px);
-        margin-top: -30px;
-      }
-      & > p{
-        font-size: 1rem;
-        transform: translateY(-180px);
-      }
-    }
+  justify-content:center;
+  align-items: center;
+  color:black;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+main.cards{
+  display: flex;
+  padding:32px;
+}
+
+main.cards section.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f5f5;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  height: 336px;
+  /* max-height: 336px; */
+  margin-left:32px;
+}
+/*para mexer so na mergem do 1 card*/
+main.cards section.card:first-child{
+  margin-left: 0;
+
+}
+
+main.cards section.card .icon{
+  width: 64px;
+  height: 64px;
+
+}
+main.cards section.card img{
+  width: 100%;
+}
+
+/*DANDO ESPAÇAMENTO ENTRE O TÍTULO E A IMAGEM*/
+main.cards section.card h3{
+  margin: 16px 0;
+}
+main.cards section.card span{
+  font-weight: 300;
+  max-width: 240px;/*faz com que o texto quebre*/
+  font-size:90% ;/*diminui a font*/
+  margin-bottom: 16px;
+  
+}
+
+/**/
+main.cards section.card button{
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;/*deixa o texto todo maiusculo*/
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 70%;
+  font-weight: 500;
+  
+}
+
+/*LINEAR GRADIENTE BUTTONS*/
+main.cards section.card.cream button{
+  background: linear-gradient(to right, #ea6298, #e07a8e);
+}
+main.cards section.card.tic button{
+  background: linear-gradient(to right, #38a886, #2a654a);
+}
+main.cards section.card.teste button{
+  background: linear-gradient(to right, #41399e, #32ade6);
+}
+
+/*SOMBRA ATRÁS DO CARD BLUR*/
+main.cards section.card.cream{
+    box-shadow: 20px 20px 80px -30px  #ea6298;
+}
+main.cards section.card.tic{
+    box-shadow: 20px 20px 80px -30px  #38a886;
+}
+main.cards section.card.teste{
+    box-shadow: 20px 20px 80px -30px  #41399e;
+}
+
+
+@media screen and (max-width: 720px) {
+  main.cards {
+    flex-direction: column;
   }
-  &:hover > div:not(:hover)>img{
-    filter: blur(2px);
-    transition: filter 0.5s ease-out;
-  }
-  img{
-    transition: 0.5s ease-in;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+  main.cards section.card{
+    margin-left: 0;
+    margin-bottom: 32px;
   }
 }
+
+@media screen and (max-width:375px){
+  main.cards {
+    margin-block: -20px;/*altura*/
+    /* margin-bottom: 233px; */
+    
+  }
+  main.cards section.card{
+    height:99vh;/*define o tamanho dos cards de largura height:634px*/
+    
+  }
+ 
+  main.cards section.card span{
+    text-transform: lowercase;/*capitalize*/
+    font-size: 20px;
+  }
+  .footer{
+    /* margin-top: 126vh; */
+    margin-top: 810px;
+  }
+}
+
+
+@media (min-width:414px){
+  main.cards section.card{
+    height:99vh;/*define o tamanho dos cards de largura height:634px*/
+    
+  }
+  main.cards section.card h3{
+    text-transform: capitalize;/*capitalize*/
+    font-size: 30px;
+    
+  }
+  main.cards section.card span{
+    text-transform: lowercase;/*capitalize*/
+    font-size: 25px;  
+  }
+
+  .footer{
+    margin-top: 76vh;
+  }
+
+}
+
+
+@media (min-width:390px){
+  main.cards section.card{
+    height:99vh;/*define o tamanho dos cards de largura height:634px*/
+    
+  }
+  main.cards section.card h3{
+    text-transform: capitalize;/*capitalize*/
+    font-size: 30px;
+    
+  }
+  main.cards section.card span{
+    text-transform: lowercase;/*capitalize*/
+    font-size: 25px;  
+  }
+
+  .footer{
+    margin-top: 76vh;
+  }
+
+}
+
+
+
+/*FIM PAG PROJETOS CARDS*/
 
 
 /*RODAPÉ FOOTER*/
 
-/*Rodapé (Footer)*/
 
 .footer{
   width: 100%;
